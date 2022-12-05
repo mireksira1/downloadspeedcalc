@@ -19,24 +19,23 @@
         <div>
             <form>
                 <div class="form-box">
-                    <p>Average download speed</p>
+                    <p>📈Average download speed</p>
                     <input type="number" name="speed" onkeyup="downloadspeed()" onchange="downloadspeed()">
-                    <select name="speed-type"onkeyup="downloadspeed()" onchange="downloadspeed()">
-                        <option value="Kb">Kb/s</option>
-                        <option value="KB">KB/s</option>
+                    <select name="speed-type" onkeyup="downloadspeed()" onchange="downloadspeed()">
+                        <option value="kb">kb/s</option>
+                        <option value="kB">kB/s</option>
                         <option value="Mb">Mb/s</option>
                         <option value="MB">MB/s</option>
                     </select>
                 </div>
                 <div class="form-box">
-                    <p>File size (in MB)</p>
+                    <p>📂Your desired file size</p>
                     <input type="number" name="size" onkeyup="downloadspeed()" onchange="downloadspeed()">
-                    <select name="size-type"onkeyup="downloadspeed()" onchange="downloadspeed()">
-                        <option value="KB">KB</option>
+                    <select name="size-type" onkeyup="downloadspeed()" onchange="downloadspeed()">
+                        <option value="kB">kB</option>
                         <option value="MB">MB</option>
                         <option value="GB">GB</option>
                     </select>
-                    <label style="color: red;">Not yet implemented</label>
                 </div>
             </form>
             <p id="message">Your file will be downloaded in: </p>
@@ -44,4 +43,5 @@
     </div>
 </body>
 <script src="script.js"></script>
+
 </html>
