@@ -6,18 +6,30 @@ function downloadspeed() {
     var speedType = document.getElementsByName("speed-type")[0].value;
     var sizeType = document.getElementsByName("size-type")[0].value;
 
-    switch(speedType){
-        case "Kb":
+    switch (speedType) {
+        case "kb":
             downspeed = (downspeed / 8) / 1024;
             break;
-        case "KB":
-            downspeed = downspeed / 1024;
+        case "kB":
+            downspeed = downspeed / 1000;
             break;
         case "Mb":
             downspeed = downspeed / 8;
             break;
         case "MB":
             downspeed = downspeed;
+            break;
+    }
+
+    switch (sizeType) {
+        case "kB":
+            filesize = filesize / 1000;
+            break;
+        case "MB":
+            filesize = filesize;
+            break;
+        case "GB":
+            filesize = filesize * 1000;
             break;
     }
 
