@@ -36,6 +36,14 @@ input {
     text-align: center;
 }
 
+select {
+    border-radius: 5px;
+    border: #4a216b solid 1px;
+    background-color: #000000;
+    color: #53326e;
+    font-size: 1.5em;
+}
+
 #message {
     font-weight: bold;
     font-size: 1.5em;
