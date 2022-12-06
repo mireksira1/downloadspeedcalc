@@ -34,8 +34,23 @@ function downloadspeed() {
     }
 
     if (filesize != 0 & downspeed != 0) {
-        var time = filesize / downspeed;
-        time = time.toFixed(2);
-        document.getElementById("message").innerText = "Your file will be downloaded in: " + time + " s";
+        var timeH = (filesize / downspeed) / 3600;
+        var timeM = (timeH - timeH.toFixed(0)) * 60;
+        var timeS = (timeH - timeH.toFixed(0)) * 3600;
+
+        timeH = timeH.toFixed(0);
+        timeM = timeM.toFixed(0);
+        timeS = timeS.toFixed(0);
+
+        if (timeM < 0){
+            timeM = 0;
+        }
+
+        if (timeS < 0){
+            timeS = 0;
+        }
+
+        //time = time.toFixed(2);
+        document.getElementById("message").innerText = "Your file will be downloaded in: " + timeH + " h " + timeM + " m " + timeS + " s.";
     }
 }
